@@ -1,0 +1,79 @@
+<div class="register-background">
+    <div class="register-container">
+        <mat-card>
+            <h1>Register</h1>
+            <mat-card-content>
+
+                <!-- Form -->
+                <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+
+                    <!-- Name -->
+
+                    <mat-form-field class="full-width">
+                        <mat-label><mat-icon class="icon">person2</mat-icon>Name</mat-label>
+                        <input matInput formControlName="name">
+                        <mat-error *ngIf="name?.hasError('required')">Name is required</mat-error>
+                        <mat-error  *ngIf="name?.errors?.['minlength'] || name?.errors?.['pattern']">Name must be at least 3 letters, start with a capital  and contain only letters</mat-error>
+
+
+                    </mat-form-field>
+
+
+                    <!-- Email -->
+                    <mat-form-field class="full-width">
+                        <mat-label><mat-icon class="icon">email</mat-icon>Email</mat-label>
+                        <input matInput formControlName="email" required type="email">
+                        <mat-error *ngIf="email?.hasError('required')">Email is required</mat-error>
+                        <mat-error *ngIf="email?.hasError('pattern')">Enter a valid email</mat-error>
+                        <mat-error id="email-errMsg" *ngIf="email?.errors?.['invalidCase']">
+                            {{ getErrorMessage(email, 'invalidCase') }}
+                          </mat-error>
+                      </mat-form-field>
+                      
+
+                    <!-- Password  -->
+                    <mat-form-field class="full-width">
+                        <mat-label><mat-icon class="icon">lock</mat-icon>Password</mat-label>
+                        <input matInput type="password" formControlName="password" required>
+                        <mat-error *ngIf="password?.hasError('required')">
+                            Password is required
+                        </mat-error>
+                        <mat-error *ngIf="password?.hasError('pattern')">
+                            Password must contain: 6+ characters, uppercase, lowercase, number, special
+                            character
+                        </mat-error>
+                    </mat-form-field>
+
+
+                    <!-- PhoneNumber -->
+
+                    <mat-form-field class="full-width">
+                        <mat-label><mat-icon class="icon">phone</mat-icon>Phone Number</mat-label>
+                        <input matInput type="tel" formControlName="phoneNo" required>
+                        <mat-error *ngIf="phoneNumber?.hasError('required')">
+                            Phone number is required
+                        </mat-error>
+
+                        <mat-error *ngIf="phoneNumber?.hasError('pattern')">
+                            Phone number must start with 9, 8, or 7 and be 10 digits long, with no letters allowed.
+                        </mat-error>
+                    </mat-form-field>
+
+
+                    <!-- <div class="upload-image">
+                        <label for="file" class="label">Upload Image</label> 
+                        <br>
+                        <input type="file" placeholder="Image" formControlName="imageUrl" id="file" class="chooseFile">
+                    </div> -->
+
+                    <div class="actions">
+                        <button  color="primary" type="submit">Register</button>
+
+                    </div>
+                    <div class="login-link">Already a member? <a routerLink="/login">Sign in</a></div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+
+    </div>
+</div>

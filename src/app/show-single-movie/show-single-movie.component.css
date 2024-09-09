@@ -1,0 +1,196 @@
+.container {
+    position: relative;
+    height: 100vh;
+    /* background-image: url('../../assets/temp.jpg');  */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 80px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    /*Semi-transparent black background */
+}
+
+.content {
+    /* border: 2px solid greenyellow; */
+    margin: 80px auto;
+    padding: 65px 30px;
+    min-height: 500px;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 70px;
+    margin-bottom: 35px;
+    /* border: 2px solid blue; */
+    line-height: 1.1;
+}
+
+.para {
+    font-size: 18px;
+    line-height: 1.4;
+    width: 80%;
+
+}
+
+.heart-icon {
+    color: red;
+    font-size: 35px; /* Adjust size if necessary */
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+
+#act-head {
+    font-size: 3.8rem; /* Increased font size */
+    color: #ffffff; /* Bright yellow color for contrast */
+    /* text-align: center; */
+    letter-spacing: 2px;
+    margin: 50px 22px;
+    font-weight: 800;
+  }
+
+.actors-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 28px;
+    margin-bottom: 22px;
+    /* justify-content: center; */
+  }
+
+.actor-card {
+    width: 150px;
+    height: 230px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* overflow: hidden; */
+    position: relative;
+    box-shadow: 0 2px 8px rgba(43, 43, 43, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin: 14px;
+  }
+  
+  .actor-info {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0; /* Aligns the text at the bottom of the card */
+  }
+  
+  .actor-info h4 {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .actor-info p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  
+  .actor-card:hover {
+    transform: scale(1.05);
+  }
+  
+.button {
+    background: none;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 8px;
+}
+
+.button:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+@media screen and (min-width:600px) and (max-width:960px) {
+    .container {
+        height: 80vh;
+    }
+
+    .content {
+        width: 80%;
+        box-sizing: border-box;
+    }
+
+    .title {
+        font-size: 60px;
+        margin-bottom: 30px;
+        line-height: 1;
+    }
+
+}
+
+@media screen and (min-width:420px) and (max-width:600px) {
+
+    .content {
+        min-height: 500px;
+        width: 80%;
+        box-sizing: border-box;
+    }
+
+    .title {
+        font-size: 57px;
+        margin-bottom: 30px;
+        line-height: 1;
+    }
+
+    .para {
+        font-size: 16px;
+        line-height: 1.4;
+        width: 100%;
+    }
+
+    .button {
+        font-size: 0.9em;
+    }
+
+    #act-head {
+        font-size: 3.2rem;
+        margin: 30px 18px;
+    
+      }
+    
+}
+
+@media screen and (min-width:320px) and (max-width:420px) {
+
+    .container {
+        height: 90vh;
+    }
+
+    .title {
+        font-size: 50px;
+        margin-bottom: 26px;
+    }
+
+    .para {
+        font-size: 14px;
+    }
+
+    .button {
+        font-size: 0.8em;
+    }
+
+}

@@ -1,0 +1,52 @@
+<div class="login-background">
+
+    <div id="login-conatiner">
+        <mat-card class="card-container">
+            <h1>Login </h1>
+
+            <mat-card-content class="card-content">
+
+                <form [formGroup]="myForm" (ngSubmit)="onLogin()">
+
+                    <!-- Email Address -->
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label><mat-icon class="icon">mail</mat-icon>Enter your Email</mat-label>
+                        <input matInput placeholder="Email" formControlName="email" required>
+                        <mat-error *ngIf="myForm.get('email')?.hasError('required')">
+                            Email is required
+                        </mat-error>
+                        <mat-error
+                            *ngIf="myForm.get('email')?.hasError('email') || myForm.get('email')?.hasError('pattern') || myForm.get('email')?.hasError('noUppercase')">
+                            "Please enter a valid email address."
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!-- Password -->
+                    <mat-form-field appearance="fill" class="full-width">
+                        <mat-label class="icon"><mat-icon>lock</mat-icon>Enter your password</mat-label>
+                        <input matInput placeholder="Password" type="password" formControlName="password" required
+                            minlength="6">
+                        <mat-error *ngIf="myForm.get('password')?.hasError('required')">
+                            Password is required
+                        </mat-error>
+                        <mat-error *ngIf="myForm.get('password')?.hasError('minlength')">
+                            Enter a valid password.
+                        </mat-error>
+                    </mat-form-field>
+
+                    <div class="login">
+                        <!-- <button mat-flat-button color="" type="submit" [disabled]="myForm.invalid" >Login</button> -->
+                        <button color="" type="submit">Login</button>
+
+                        <div class="register-link">
+                            Not a member? <a routerLink="/register">Sign up</a>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

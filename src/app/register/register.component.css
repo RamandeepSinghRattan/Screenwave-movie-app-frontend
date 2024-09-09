@@ -1,0 +1,205 @@
+.register-background {
+    background-image: url('../../assets/log-reg-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-color: black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 130vh;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+.register-container {
+    max-width: 600px;
+    width: 90%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.register-container mat-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    /* color: blue; */
+    box-shadow: 4px 6px 8px 10px rgb(232, 243, 243);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+mat-label {
+    color: #5e5e5e;
+}
+
+mat-error {
+    white-space: nowrap;
+    /* Prevents the text from wrapping */
+    overflow: hidden;
+    /* Hides any overflow text */
+    text-overflow: ellipsis;
+    /* Adds ellipsis if the text overflows */
+}
+
+#email-errMsg{
+    margin-bottom: 5px;
+    
+}
+
+.register-container mat-form-field {
+    width: 100%;
+}
+
+mat-form-field {
+    margin-bottom: 28px;
+}
+
+h1 {
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 45px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.register-container mat-form-field input {
+    color: rgb(51, 0, 255);
+    font-size: larger;
+    border-radius: 50px;
+}
+
+.full-width {
+    margin: 8px 5px;
+
+}
+
+.register-container mat-error {
+    color: #d80000;
+}
+
+.actions button {
+    width: 100%;
+    background: linear-gradient(135deg, #1e38c6, #5dafff);
+    color: #ffffff;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 18px;
+}
+
+.actions button :hover {
+    cursor: pointer;
+    color: #000;
+}
+
+.label {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.login-link {
+    color: rgb(247, 247, 240);
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login-link a {
+    color: #5dafff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+.icon {
+    color: rgb(4, 70, 103);
+}
+
+.upload-image {
+    font-size: 20px;
+    color: #f40303;
+    margin: 14px 5px;
+}
+
+mat-error {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+
+/* For Tablets */
+@media (max-width: 768px) {
+    .register-container {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .actions button {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .login-link {
+        font-size: 16px;
+    }
+
+    .upload-image {
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .register-background {
+        margin-top: 110px;
+    }
+
+}
+
+/* For Mobile Phones */
+@media (max-width: 480px) {
+    .register-background {
+        background-size: cover;
+        background-position: center;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .register-container {
+        max-width: 100%;
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .actions button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .login-link {
+        font-size: 14px;
+    }
+
+    .upload-image {
+        font-size: 16px;
+    }
+}

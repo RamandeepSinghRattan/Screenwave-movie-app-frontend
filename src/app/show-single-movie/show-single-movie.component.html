@@ -1,0 +1,31 @@
+<div [ngStyle]="{'background-image': 'url(' + 'https://image.tmdb.org/t/p/w1280' + movie.backdrop_path + ')'}"
+    class="container">
+    <div class="overlay">
+        <div class="content">
+            <h1 class="title">{{movie.title}}</h1>
+            <p class="para">{{movie.overview}}</p>
+            <p class="para">Rated: {{getFormattedRating(movie.vote_average)}}/10</p>
+            <p class="para">Genres: {{ genreNames.join(', ') }}</p>
+            <p class="para">Realease Date: {{movie.release_date}}</p>
+
+            <mat-icon *ngIf="isFavorited" (click)="heartIconClicked()" class="heart-icon"
+                matTooltip="Remove movie from favourite's">favorite</mat-icon>
+
+            <button *ngIf="!isFavorited" class="button" (click)="addToFav()">Add To Favourite List</button>
+            <button class="button" (click)="navigateTo(movie.id)">Watch Trailer</button>
+
+        </div>
+    </div>
+</div>
+
+
+<h1 id="act-head">CASTS</h1>
+
+<div class="actors-container">
+    <div *ngFor="let actor of actors" class="actor-card" [style.background-image]="'url(' + actor.image + ')'">
+        <div class="actor-info">
+            <h4>{{actor.name}}</h4>
+            <p>Role:{{actor.role}}</p>
+        </div>
+    </div>
+</div>

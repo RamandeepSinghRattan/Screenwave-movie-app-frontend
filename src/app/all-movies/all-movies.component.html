@@ -1,0 +1,83 @@
+<div id="main">
+
+    <div id="search">
+        <div id="input-bt-box">
+            <input type="text" placeholder="Search movie" [(ngModel)]="search" (input)="searched()">
+
+            <mat-icon id="icn" (click)="searched()">search</mat-icon>
+        </div>
+    </div>
+
+
+    <article *ngIf="showResults" class="search-results">
+        <section class="movies-sec">
+
+            <div class="first-part">
+                <h1 class="section-head">Search Results</h1>
+            </div>
+
+            <div class="movie-cards-box">
+                <div *ngFor="let movie of searchResults">
+                    <app-movie-card [movie]="movie"></app-movie-card>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <article>
+        <section class="movies-sec">
+
+            <div class="first-part">
+                <h1 class="section-head">TopRated Movies</h1>
+            </div>
+
+            <div class="movie-cards-box">
+                <div *ngFor="let singleMovie of topRatedMovies.results">
+                    <app-movie-card [movie]="singleMovie"></app-movie-card>
+                </div>
+            </div>
+        </section>
+    </article>
+    <article>
+        <section class="movies-sec">
+
+            <div class="first-part">
+                <h1 class="section-head">Now Playing Movies</h1>
+            </div>
+
+            <div class="movie-cards-box">
+                <div *ngFor="let singleMovie of nowPlayingMovies.results">
+                    <app-movie-card [movie]="singleMovie"></app-movie-card>
+                </div>
+            </div>
+        </section>
+    </article>
+    <article>
+        <section class="movies-sec">
+
+            <div class="first-part">
+                <h1 class="section-head">Popular Movies</h1>
+            </div>
+
+            <div class="movie-cards-box">
+                <div *ngFor="let singleMovie of popularMovies.results">
+                    <app-movie-card [movie]="singleMovie"></app-movie-card>
+                </div>
+            </div>
+        </section>
+    </article>
+    <article>
+        <section class="movies-sec">
+
+            <div class="first-part">
+                <h1 class="section-head">Upcoming Movies</h1>
+            </div>
+
+            <div class="movie-cards-box">
+                <div *ngFor="let singleMovie of upcomingMovies.results">
+                    <app-movie-card [movie]="singleMovie"></app-movie-card>
+                </div>
+            </div>
+        </section>
+    </article>
+</div>

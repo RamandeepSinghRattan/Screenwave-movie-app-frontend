@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>User Profile</h1>
+    <div class="profile-card">
+        <h2>Profile Details</h2>
+        <p><strong>Name:</strong> {{ user.name }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Phone Number:</strong> {{ user.phoneNo }}</p>
+
+        <div class="movies-list">
+            <h3>Your Favourite Movies</h3>
+            <div class="movie-item" *ngFor="let movie of user.favouriteMovies" (click)="navigateTo(movie.id)">
+                {{ movie.title }}
+
+            </div>
+        </div>
+    </div>
+</div>

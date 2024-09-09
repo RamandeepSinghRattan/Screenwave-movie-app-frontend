@@ -1,0 +1,11 @@
+<div id="main">
+
+  <h1>FAVOURITE MOVIES</h1>
+
+  <div class="movie-cards-box">
+    <div *ngFor="let favMovie of favMovies">
+      <app-favourite-movie-card [movie]="favMovie"
+        (movieRemoved)="handleMovieRemoved($event)"></app-favourite-movie-card>
+    </div>
+  </div>
+</div>

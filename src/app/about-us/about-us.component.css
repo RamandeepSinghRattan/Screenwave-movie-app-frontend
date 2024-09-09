@@ -1,0 +1,60 @@
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh; 
+  padding: 0; 
+  margin: 0;
+  background-image: url('../../assets/about-us-bg.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  /* background-color: black; */
+  margin-top: 80px;
+}
+
+.about-content {
+  max-width: 800px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6); 
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(184, 184, 184, 0.1);
+  text-align: center;
+}
+
+
+.about-title {
+  font-size: 2.5rem;
+  color: #e5ff00; 
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2rem; /* Adjust font size for tablets */
+  }
+
+  .about-description {
+    font-size: 1rem; /* Adjust font size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.5rem; /* Further reduce font size for mobile phones */
+  }
+
+  .about-description {
+    font-size: 0.9rem; /* Further reduce font size for mobile phones */
+  }
+}

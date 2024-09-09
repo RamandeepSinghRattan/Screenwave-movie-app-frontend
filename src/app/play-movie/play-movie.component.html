@@ -1,0 +1,8 @@
+<div id="container">
+    <h1>Trailer</h1>
+    <div *ngIf="trailerUrl">
+        <div class="iframe-wrapper">
+            <iframe [src]="trailerUrl" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>

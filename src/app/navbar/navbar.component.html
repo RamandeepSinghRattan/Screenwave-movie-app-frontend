@@ -1,0 +1,22 @@
+<nav id="navbar">
+    <img src="../../assets/SW-logo.png" alt="">
+    <div id="right-nav">
+        <ul id="list">
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="movies">Movies</a></li>
+            <li><a routerLink="aboutus">About Us</a></li>
+        </ul>
+        <button id="btn" (click)="navigateToLogin()" *ngIf="!isLogin">Login</button>
+
+        <div *ngIf="isLogin" class="dropdown">
+            <button class="dropdown-toggle" (click)="toggleDropdown()">
+                Hi <span style="color: #3DC2EC;">{{userName}}</span><mat-icon id="drop-icn">expand_more</mat-icon>
+            </button>
+            <div class="dropdown-menu" *ngIf="showDropdown">
+                <a routerLink="user/profile" >Your Profile</a>
+                <a routerLink="favourites">Your Favourite List</a>
+                <a (click)="userLogout()">Logout</a>
+            </div>
+        </div>
+    </div>
+</nav>

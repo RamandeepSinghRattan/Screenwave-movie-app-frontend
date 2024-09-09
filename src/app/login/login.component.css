@@ -1,0 +1,177 @@
+.login-background {
+  background-image: url('../../assets/log-reg-bg.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  margin-top: 80px;
+}
+
+.card {
+  height: 300px;
+  margin-bottom: -20px;
+  background: transparent;
+  /* Removed background image */
+}
+
+h2 {
+  font-size: 32px;
+  color: whitesmoke;
+  text-align: center;
+  margin-top: 100px;
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
+  color: whitesmoke;
+}
+
+#login-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.card-container {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Use a background color instead of image */
+
+  box-shadow: 6px 8px 8px 8px rgba(218, 217, 223, 0.2);
+  padding: 30px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.full-width {
+  width: 100%;
+  margin: 6px 0px;
+}
+
+
+.login {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+
+button {
+  width: 100%;
+  background: linear-gradient(135deg, #1e38c6, #5dafff);
+  color: #ffffff;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #000;
+}
+
+.register-link {
+  margin-top: 15px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.register-link a {
+  color: #5dafff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+mat-error {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+mat-label{
+  color: #5E5E5E;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  #login-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .card-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .full-width {
+    width: 80%;
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-background {
+    padding: 0 10px;
+  }
+
+  #login-container {
+    margin: 0;
+  }
+
+  .card-container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .register-link {
+    font-size: 14px;
+  }
+
+  .full-width {
+    width: 80%;
+    margin-left: 40px;
+  }
+}
